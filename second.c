@@ -20,7 +20,7 @@ void first_process(){
   }waitpid(a,&report,0);
   timing=clock()-timing;
   double ans=(double)timing;
-  printf("first_process time: %f\n",ans);
+  printf("\n\nfirst_process time: %f\n\n\n",ans);
 }
 
 void second_process(){
@@ -35,7 +35,7 @@ void second_process(){
   }waitpid(b,&report,0);
   timing=clock()-timing;
   double ans=(double)timing;
-  printf("second_process time: %f\n",ans);
+  printf("\n\nsecond_process time: %f\n\n\n",ans);
 }
 
 void third_process(){
@@ -50,7 +50,7 @@ void third_process(){
   }waitpid(c,&report,0);
   timing=clock()-timing;
   double ans=(double)timing;
-  printf("third_process time: %f\n",ans);
+  printf("\n\nthird_process time: %f\n\n\n",ans);
 }
 
 void main(){
