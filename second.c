@@ -22,7 +22,7 @@ void first_process(){
   double ans=(double)timing;
   printf("\n\nfirst_process time:");
   for(int i=0;i<ans;i++){
-    printf('*');
+    printf("*");
   }
   printf(" %f\n\n",ans);
 }
@@ -41,7 +41,7 @@ void second_process(){
   double ans=(double)timing;
   printf("\n\nsecond_process time:");
   for(int i=0;i<ans;i++){
-    printf('*');
+    printf("*");
   }
   printf(" %f\n\n",ans);
 }
@@ -60,7 +60,7 @@ void third_process(){
   double ans=(double)timing;
   printf("\n\nthird_process time:");
   for(int i=0;i<ans;i++){
-    printf('*');
+    printf("*");
   }
   printf(" %f\n\n",ans);
 }
