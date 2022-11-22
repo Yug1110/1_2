@@ -8,7 +8,7 @@
 pid_t a,b,c;
 int report;
 
-void first_process(){
+double first_process(){
   clock_t timing;
   timing=clock();
   a=fork();
@@ -25,9 +25,10 @@ void first_process(){
     printf("*");
   }
   printf(" %f\n\n",ans);
+  return ans;
 }
 
-void second_process(){
+double second_process(){
   clock_t timing;
   timing=clock();
   b=fork();
@@ -44,9 +45,10 @@ void second_process(){
     printf("*");
   }
   printf(" %f\n\n",ans);
+  return ans;
 }
 
-void third_process(){
+double third_process(){
   clock_t timing;
   timing=clock();
   c=fork();
@@ -63,10 +65,29 @@ void third_process(){
     printf("*");
   }
   printf(" %f\n\n",ans);
+  return ans;
 }
 
 void main(){
-  first_process();
-  second_process();
-  third_process();
+  double ans=first_process();
+  printf("\n\nfirst_process time:");
+  for(int i=0;i<ans;i++){
+    printf("*");
+  }
+  printf(" %f\n",ans);
+
+  ans=second_process();
+  printf("second_process time:");
+  for(int i=0;i<ans;i++){
+    printf("*");
+  }
+  printf(" %f\n\n",ans);
+
+  ans=third_process();
+  printf("third_process time:");
+  for(int i=0;i<ans;i++){
+    printf("*");
+  }
+  printf(" %f\n",ans);
+
 }
