@@ -73,20 +73,20 @@ void main(){
   double ans2=second_process();
   double ans3=third_process();
   printf("\n\nfirst_process time:");
-  for(int i=0;i<ans;i++){
+  for(int i=0;i<ans1;i++){
     printf("*");
   }
-  printf(" %f\n",ans);
+  printf(" %f\n",ans1);
 
   printf("second_process time:");
-  for(int i=0;i<ans;i++){
+  for(int i=0;i<ans2;i++){
     printf("*");
   }
-  printf(" %f\n\n",ans);
+  printf(" %f\n\n",ans2);
   
   printf("third_process time:");
-  for(int i=0;i<ans;i++){
+  for(int i=0;i<ans3;i++){
     printf("*");
   }
-  printf(" %f\n",ans);
+  printf(" %f\n",ans3);
 }
