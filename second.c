@@ -20,11 +20,11 @@ double first_process(){
   }waitpid(a,&report,0);
   timing=clock()-timing;
   double ans=(double)timing;
-  printf("\n\nfirst_process time:");
-  for(int i=0;i<ans;i++){
-    printf("*");
-  }
-  printf(" %f\n\n",ans);
+//   printf("\n\nfirst_process time:");
+//   for(int i=0;i<ans;i++){
+//     printf("*");
+//   }
+//   printf(" %f\n\n",ans);
   return ans;
 }
 
@@ -40,11 +40,11 @@ double second_process(){
   }waitpid(b,&report,0);
   timing=clock()-timing;
   double ans=(double)timing;
-  printf("\n\nsecond_process time:");
-  for(int i=0;i<ans;i++){
-    printf("*");
-  }
-  printf(" %f\n\n",ans);
+//   printf("\n\nsecond_process time:");
+//   for(int i=0;i<ans;i++){
+//     printf("*");
+//   }
+//   printf(" %f\n\n",ans);
   return ans;
 }
 
@@ -60,34 +60,33 @@ double third_process(){
   }waitpid(c,&report,0);
   timing=clock()-timing;
   double ans=(double)timing;
-  printf("\n\nthird_process time:");
-  for(int i=0;i<ans;i++){
-    printf("*");
-  }
-  printf(" %f\n\n",ans);
+//   printf("\n\nthird_process time:");
+//   for(int i=0;i<ans;i++){
+//     printf("*");
+//   }
+//   printf(" %f\n\n",ans);
   return ans;
 }
 
 void main(){
-  double ans=first_process();
+  double ans1=first_process();
+  double ans2=second_process();
+  double ans3=third_process();
   printf("\n\nfirst_process time:");
   for(int i=0;i<ans;i++){
     printf("*");
   }
   printf(" %f\n",ans);
 
-  ans=second_process();
   printf("second_process time:");
   for(int i=0;i<ans;i++){
     printf("*");
   }
   printf(" %f\n\n",ans);
-
-  ans=third_process();
+  
   printf("third_process time:");
   for(int i=0;i<ans;i++){
     printf("*");
   }
   printf(" %f\n",ans);
-
 }
